@@ -1,5 +1,5 @@
 
-# Deploying multiple EC2 instances on AWS using Terraform, configuring them behind an Elastic Load Balancer (ELB), and automating further setup with Ansible.
+## Deploying multiple EC2 instances on AWS using Terraform, configuring them behind an Elastic Load Balancer (ELB), and automating further setup with Ansible.
 
 ### Terraform Setup
 - Using Terraform to create several EC2 instances.
