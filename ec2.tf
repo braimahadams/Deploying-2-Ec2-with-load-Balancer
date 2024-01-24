@@ -10,14 +10,13 @@ resource "aws_instance" "ass-1" {
       type = "ssh"
       host = "self.public_ip"
       user = "ubuntu"
-      private_key = file("/root/terraform/london-key-pair.pem")
+      private_key = file("/home/braimahadams/Downloads/sensitive/my-keypair.pem")
     }
 
     tags = {
       Name = "ass-1"
       source = "terraform"
     }
-  
 }
 
 resource "aws_instance" "ass-2" {
@@ -32,14 +31,13 @@ resource "aws_instance" "ass-2" {
       type = "ssh"
       host = "self.public_ip"
       user = "ubuntu"
-      private_key = file("/root/terraform/london-key-pair.pem")
+      private_key = file("/home/braimahadams/Downloads/sensitive/my-keypair.pem")
     }
 
     tags = {
       Name = "ass-2"
       source = "terraform"
     }
-  
 }
 
 resource "aws_instance" "ass-3" {
@@ -54,7 +52,7 @@ resource "aws_instance" "ass-3" {
       type = "ssh"
       host = "self.public_ip"
       user = "ubuntu"
-      private_key = file("/root/terraform/london-key-pair.pem")
+      private_key = file("/home/braimahadams/Downloads/sensitive/my-keypair.pem")
     }
 
     tags = {
@@ -64,10 +62,10 @@ resource "aws_instance" "ass-3" {
 }
 
 resource "local_file" "Ip_address" {
-    filename = "/root/terraform/ansible-playbook/host-inventory"
+    filename = "/home/braimahadams/Desktop/NEW-load-balancer-project/terraform-mini-pro-v2/ansible-playbook/host-inventory"
     content = <<EOT
     ${aws_instance.ass-1.public_ip}
     ${aws_instance.ass-2.public_ip}
     ${aws_instance.ass-3.public_ip}
-     EOT
+    EOT
 }

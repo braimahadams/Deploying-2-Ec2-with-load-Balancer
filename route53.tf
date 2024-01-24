@@ -1,5 +1,5 @@
 variable "domain_name" {
-    default = "www.manifestation.netfy.blog"
+    default = "www.braimahadams.netfy.cloud"
     type = string
     description = "Domain name"
 }

@@ -1,5 +1,5 @@
 variable "ami" {
-    default = "ami-0fc5d935ebf8bc3bc"
+    default = "ami-09d6bbc1af02c2ca1"
     type = string
 }
 
@@ -9,7 +9,7 @@ variable "type" {
 }
 
 variable "key_pair" {
-  default = "london-key-pair.pem"
+  default = "my-keypair"
 }
 
 variable "availability_zone" {
